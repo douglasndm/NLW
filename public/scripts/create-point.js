@@ -67,6 +67,8 @@ function handleSelectedItem(event){
 
     const itemId = itemLi.dataset.id;
 
+    console.log('ITEM ID: ', itemId);
+
     // verificar se existem itens selecionados
     const alreadySelected = selectedItems.findIndex(function(item){
         const itemFound = item == itemId;
@@ -88,6 +90,8 @@ function handleSelectedItem(event){
         // se não tiver selecionando adiciona ele
         selectedItems.push(itemId);
     }
+
+    console.log('selectedItems: ', selectedItems)
 
     collectedItems.value = selectedItems;
 }
